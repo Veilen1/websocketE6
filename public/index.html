@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tienda de Productos</title>
+</head>
+<body>
+    <div class="div">
+        <h1>Productos</h1>
+        <hr>
+        <form onsubmit="return addProduct()" autocomplete="off">
+            <input id="name" placeholder="Nombre del producto: " type="text" required>
+            <input id="price" placeholder="Precio: " type="number" required>
+            <input id="url" placeholder="URL del producto: " type="url" required>
+            <input type="submit" value="Mostrar Producto">
+        </form>
+        <div id="products"></div>
+    </div>
+
+    <div class="chat">
+        <h1>Centro de mensajes</h1>
+        <hr>
+        <form onsubmit="return addMessage()" autocomplete="off">
+            <input id="email" type="text" placeholder="Ingresa tu email:  " required>
+            <input id="texto" type="text" placeholder="Inserte un mensaje: " required>
+            <input type="submit" value="Enviar mensaje!!">
+        </form>
+        <div id="messages"></div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
